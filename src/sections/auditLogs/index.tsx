@@ -1,13 +1,13 @@
-import { Button } from "@/components/ui/button";
-import { Calendar, Download, Filter, User } from "lucide-react";
-import { Label } from "@/components/ui/label";
+import { Button } from '@/components/ui/button';
+import { Calendar, Download, Filter, User } from 'lucide-react';
+import { Label } from '@/components/ui/label';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from '@/components/ui/select';
 import {
   Table,
   TableBody,
@@ -15,26 +15,25 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { auditLogList } from "@/data";
-import { cn } from "@/lib/utils";
-import { useEffect, useRef, useState } from "react";
+} from '@/components/ui/table';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { auditLogList } from '@/data';
+import { cn } from '@/lib/utils';
+import { useEffect, useRef, useState } from 'react';
 
 const AuditLogsSection = () => {
-  const [mainDiv, setMainDiv] = useState<string>("0");
+  const [mainDiv, setMainDiv] = useState<string>('0');
   const mainDivRef = useRef<HTMLDivElement>(null);
-  console.log("main", mainDiv);
+  console.log('main', mainDiv);
   useEffect(() => {
     if (mainDivRef.current) {
-      const calculatedHeight =
-        mainDivRef.current.clientHeight - 60 - 144 - 24 - 24 - 24 - 24;
+      const calculatedHeight = mainDivRef.current.clientHeight - 60 - 144 - 24 - 24 - 24 - 24;
       setMainDiv(calculatedHeight.toString());
     }
   }, []);
 
   return (
-    <div ref={mainDivRef} className="h-full overflow-x-auto space-y-6">
+    <div ref={mainDivRef} className="h-full space-y-6 overflow-x-auto">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-bold">Audit log</h2>
         <Button>
@@ -96,11 +95,11 @@ const AuditLogsSection = () => {
         </div>
       </div>
 
-      <div className="border overflow-hidden rounded-lg">
+      <div className="overflow-hidden rounded-lg border">
         <div
           className={cn(
-            "overflow-auto",
-            `h-[calc(100vh-208px)] md:h-[calc(100vh-680px)] lg:h-[570px]`
+            'overflow-auto',
+            `h-[calc(100vh-208px)] md:h-[calc(100vh-680px)] lg:h-[570px]`,
           )}
         >
           <Table className="relative">
@@ -110,7 +109,7 @@ const AuditLogsSection = () => {
                 <TableHead>Email</TableHead>
                 <TableHead className="text-right">Date</TableHead>
               </TableRow>
-              <div className="bg-[#dad7d7] h-[1px] w-full absolute bottom-0" />
+              <div className="absolute bottom-0 h-[1px] w-full bg-[#dad7d7]" />
             </TableHeader>
             <TableBody>
               {auditLogList.map((log) => (
@@ -118,24 +117,17 @@ const AuditLogsSection = () => {
                   <TableCell>
                     <div className="flex items-center gap-3">
                       <Avatar className="h-8 w-8">
-                        <AvatarImage
-                          src={log.user.avatar}
-                          alt={log.user.name}
-                        />
+                        <AvatarImage src={log.user.avatar} alt={log.user.name} />
                         <AvatarFallback>
                           {log.user.name
-                            .split(" ")
+                            .split(' ')
                             .map((n) => n[0])
-                            .join("")}
+                            .join('')}
                         </AvatarFallback>
                       </Avatar>
                       <div className="flex flex-col">
-                        <span className="text-sm font-medium">
-                          {log.user.name}
-                        </span>
-                        <span className="text-sm text-muted-foreground">
-                          {log.user.email}
-                        </span>
+                        <span className="text-sm font-medium">{log.user.name}</span>
+                        <span className="text-sm text-muted-foreground">{log.user.email}</span>
                       </div>
                     </div>
                   </TableCell>
@@ -145,9 +137,7 @@ const AuditLogsSection = () => {
                     </span>
                   </TableCell>
                   <TableCell className="text-right">
-                    <span className="text-sm text-muted-foreground">
-                      {log.timestamp}
-                    </span>
+                    <span className="text-sm text-muted-foreground">{log.timestamp}</span>
                   </TableCell>
                 </TableRow>
               ))}
