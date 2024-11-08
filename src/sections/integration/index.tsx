@@ -26,7 +26,7 @@ const IntegrationSection = () => {
             <div className="space-y-4">
                 <div className="flex items-center gap-2">
                     <h2 className="text-lg font-medium">All integrations</h2>
-                    <Badge variant="secondary" className="rounded-full">11</Badge>
+                    <Badge variant="secondary" className="rounded-full">{integrationList.length}</Badge>
                 </div>
                 <div className="rounded-lg border">
                     <div className="border-b p-4 font-medium">Integration</div>
