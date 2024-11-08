@@ -6,18 +6,18 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Plus, Upload, User } from "lucide-react";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
+} from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Plus, Upload, User } from 'lucide-react';
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from '@/components/ui/select';
 import {
   Table,
   TableBody,
@@ -25,11 +25,11 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
-import { ChangeEvent, useState } from "react";
-import { accountsList } from "@/data";
-import Image from "next/image";
-import { cn } from "@/lib/utils";
+} from '@/components/ui/table';
+import { ChangeEvent, useState } from 'react';
+import { accountsList } from '@/data';
+import Image from 'next/image';
+import { cn } from '@/lib/utils';
 
 const AccountSection = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -46,13 +46,11 @@ const AccountSection = () => {
     }
   };
   return (
-    <div className="container h-full flex flex-col gap-5 mx-auto">
-      <div className="flex justify-between gap-4 items-center">
+    <div className="container mx-auto flex h-full flex-col gap-5">
+      <div className="flex items-center justify-between gap-4">
         <div className="space-y-2">
           <h2 className="text-2xl font-bold">Accounts</h2>
-          <p className={"text-sm"}>
-            Manage your account settings and preferences here.
-          </p>
+          <p className={'text-sm'}>Manage your account settings and preferences here.</p>
         </div>
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
@@ -64,9 +62,7 @@ const AccountSection = () => {
             <DialogHeader>
               <DialogTitle>Add New Account</DialogTitle>
               <DialogDescription>
-                {
-                  "Enter the details for the new account here. Click save when you're done."
-                }
+                {"Enter the details for the new account here. Click save when you're done."}
               </DialogDescription>
             </DialogHeader>
             <form className="grid gap-4 py-4">
@@ -74,21 +70,21 @@ const AccountSection = () => {
                 <Label htmlFor="profile-picture" className="text-right">
                   Profile Picture
                 </Label>
-                <div className="flex items-center gap-4 col-span-3">
-                  <div className="w-18 h-16 aspect-square rounded-full overflow-hidden bg-muted flex items-center justify-center">
+                <div className="col-span-3 flex items-center gap-4">
+                  <div className="w-18 flex aspect-square h-16 items-center justify-center overflow-hidden rounded-full bg-muted">
                     {profilePicture ? (
                       <img
                         src={profilePicture}
                         alt="Profile preview"
-                        className="w-full  h-full object-cover"
+                        className="h-full w-full object-cover"
                       />
                     ) : (
-                      <User className="w-8 h-8 text-muted-foreground" />
+                      <User className="h-8 w-8 text-muted-foreground" />
                     )}
                   </div>
                   <Label htmlFor="picture-upload" className="cursor-pointer">
-                    <div className="flex items-center gap-2 px-4 py-2 bg-muted rounded-md">
-                      <Upload className="w-4 h-4" />
+                    <div className="flex items-center gap-2 rounded-md bg-muted px-4 py-2">
+                      <Upload className="h-4 w-4" />
                       <span>Upload</span>
                     </div>
                     <Input
@@ -137,11 +133,11 @@ const AccountSection = () => {
           </DialogContent>
         </Dialog>
       </div>
-      <div className="border rounded-lg overflow-hidden">
+      <div className="overflow-hidden rounded-lg border">
         <div
           className={cn(
-            "overflow-auto",
-            `h-[calc(100vh-165px)] md:h-[calc(100vh-620px)] lg:h-[630px]`
+            'overflow-auto',
+            `h-[calc(100vh-165px)] md:h-[calc(100vh-620px)] lg:h-[630px]`,
           )}
         >
           <Table className="relative">
@@ -152,7 +148,7 @@ const AccountSection = () => {
                 <TableHead>Email</TableHead>
                 <TableHead>Role</TableHead>
               </TableRow>
-              <div className="bg-[#dad7d7] h-[1px] w-full absolute bottom-0" />
+              <div className="absolute bottom-0 h-[1px] w-full bg-[#dad7d7]" />
             </TableHeader>
             <TableBody>
               {accountsList.map((account) => (
