@@ -24,6 +24,8 @@ import {Button} from "@/components/ui/button";
 import {useState} from "react";
 import AccountSection from "@/sections/accounts";
 import IntegrationSection from "@/sections/integration";
+import NotificationSection from "@/sections/notification";
+import AuditLogsSection from "@/sections/auditLogs";
 
 const data = {
     nav: [
@@ -102,16 +104,10 @@ export default function Home() {
                                 <IntegrationSection/>
                             )}
                             {activePage === "Notification" && (
-                                <div className="space-y-4">
-                                    <h2 className="text-2xl font-bold">Notification</h2>
-                                    <p>Customize your notification preferences.</p>
-                                </div>
+                                <NotificationSection/>
                             )}
                             {activePage === "Audit Log" && (
-                                <div className="space-y-4">
-                                    <h2 className="text-2xl font-bold">Audit Log</h2>
-                                    <p>View and manage your account activity logs.</p>
-                                </div>
+                                <AuditLogsSection/>
                             )}
                         </div>
                     </main>

@@ -92,3 +92,114 @@ export const integrationList = [
         users: "Anyone in Acme Inc.",
     },
 ]
+
+export const notificationList = [
+    {
+        id: 1,
+        title: "New comment on your post",
+        description: "John Doe commented on your recent post.",
+        time: "2 hours ago",
+        read: false,
+    },
+    {
+        id: 2,
+        title: "Your project was updated",
+        description: "The 'Marketing Campaign' project has been updated.",
+        time: "5 hours ago",
+        read: false,
+    },
+    {
+        id: 3,
+        title: "New team member added",
+        description: "Jane Smith has joined your team.",
+        time: "1 day ago",
+        read: true,
+    },
+    {
+        id: 4,
+        title: "Reminder: Team meeting",
+        description: "Don't forget about the team meeting at 3 PM today.",
+        time: "1 day ago",
+        read: true,
+    },
+]
+
+export const auditLogList = [
+    {
+        id: 1,
+        user: {
+            name: "Albert Flores",
+            email: "chambers@acmelabs.com",
+            avatar: "/placeholder.svg?height=32&width=32",
+        },
+        action: "Edited",
+        target: "Private page",
+        timestamp: "2022/11/05 11:23 PM",
+    },
+    {
+        id: 2,
+        user: {
+            name: "Kristin Watson",
+            email: "jackson.graham@gmail.com",
+            avatar: "/placeholder.svg?height=32&width=32",
+        },
+        action: "Viewed",
+        target: "Secret Project Q4",
+        timestamp: "2022/11/05 11:22 PM",
+    },
+    {
+        id: 3,
+        user: {
+            name: "Bessie Cooper",
+            email: "deanna.curtis@acmelabs.com",
+            avatar: "/placeholder.svg?height=32&width=32",
+        },
+        action: "Viewed",
+        target: "OS",
+        timestamp: "2022/11/05 11:21 PM",
+    },
+    {
+        id: 4,
+        user: {
+            name: "Bessie Cooper",
+            email: "deanna.curtis@acmelabs.com",
+            avatar: "/placeholder.svg?height=32&width=32",
+        },
+        action: "Edited",
+        target: "OS",
+        timestamp: "2022/11/05 11:21 PM",
+    },
+    {
+        id: 5,
+        user: {
+            name: "Darrell Steward",
+            email: "michelle.rivera@acmelabs.com",
+            avatar: "/placeholder.svg?height=32&width=32",
+        },
+        action: "Exported",
+        target: "Product Search",
+        timestamp: "2022/11/05 11:10 PM",
+    },
+    {
+        id: 6,
+        user: {
+            name: "Cody Fisher",
+            email: "michael.mitc@acmelabs.com",
+            avatar: "/placeholder.svg?height=32&width=32",
+        },
+        action: "Downloaded",
+        target: "Contract.pdf",
+        timestamp: "2022/11/05 11:01 PM",
+    },
+    {
+        id: 7,
+        user: {
+            name: "Courtney Henry",
+            email: "nathan.roberts@acmelabs.com",
+            avatar: "/placeholder.svg?height=32&width=32",
+        },
+        action: "Added",
+        target: "12 members",
+        timestamp: "2022/11/05 10:43 PM",
+    },
+]
