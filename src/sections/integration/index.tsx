@@ -4,10 +4,11 @@ import {Switch} from "@/components/ui/switch";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import {Button} from "@/components/ui/button";
 import {MoreHorizontal} from "lucide-react";
+import Image from "next/image";
 
 const IntegrationSection = () => {
     return (
-        <div className="w-full max-w-5xl p-6">
+        <div className="w-full max-w-5xl">
             <div className="mb-8">
                 <div className="space-y-4">
                     <h2 className="text-2xl font-bold">Integrations</h2>
@@ -32,8 +33,8 @@ const IntegrationSection = () => {
                     <div className="divide-y">
                         {integrationList.map((integration) => (
                             <div key={integration.id} className="flex items-center justify-between p-4">
-                                <div className="flex items-center gap-3">
-                                    <img
+                                <div className="flex items-start gap-3">
+                                    <Image
                                         src={integration.icon}
                                         alt={`${integration.name} icon`}
                                         className="h-8 w-8 rounded"
