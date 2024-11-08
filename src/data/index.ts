@@ -89,8 +89,42 @@ export const accountsList = [
     role: "Editor",
     profilePicture: ManImage,
   },
+  {
+    id: 13,
+    name: "Lewis",
+    email: "lewis@example.com",
+    role: "Editor",
+    profilePicture: ManImage,
+  },
+  {
+    id: 14,
+    name: "Walker",
+    email: "walker@example.com",
+    role: "Editor",
+    profilePicture: ManImage,
+  },
+  {
+    id: 15,
+    name: "Young",
+    email: "young@example.com",
+    role: "Editor",
+    profilePicture: ManImage,
+  },
+  {
+    id: 16,
+    name: "King",
+    email: "king@example.com",
+    role: "Editor",
+    profilePicture: ManImage,
+  },
+  {
+    id: 17,
+    name: "Scott",
+    email: "scott@example.com",
+    role: "Editor",
+    profilePicture: ManImage,
+  },
 ];
-
 
 export const integrationList = [
   {
@@ -269,5 +303,48 @@ export const auditLogList = [
     target: "Project Files",
     timestamp: "2022/11/05 11:05 PM",
   },
+  {
+    id: 11,
+    user: {
+      name: "Michaels",
+      email: "michaels@acmelabs.com",
+      avatar: "/placeholder.svg?height=32&width=32",
+    },
+    action: "Edited",
+    target: "Dashboard",
+    timestamp: "2022/11/05 11:23 PM",
+  },
+  {
+    id: 12,
+    user: {
+      name: "James",
+      email: "james@acmelabs.com",
+      avatar: "/placeholder.svg?height=32&width=32",
+    },
+    action: "Reviewed",
+    target: "Internal Docs",
+    timestamp: "2022/11/05 11:20 PM",
+  },
+  {
+    id: 13,
+    user: {
+      name: "Hale",
+      email: "hale@acmelabs.com",
+      avatar: "/placeholder.svg?height=32&width=32",
+    },
+    action: "Uploaded",
+    target: "Invoices",
+    timestamp: "2022/11/05 11:10 PM",
+  },
+  {
+    id: 14,
+    user: {
+      name: "Lee",
+      email: "lee@acmelabs.com",
+      avatar: "/placeholder.svg?height=32&width=32",
+    },
+    action: "Shared",
+    target: "Project Files",
+    timestamp: "2022/11/05 11:05 PM",
+  },
 ];
-

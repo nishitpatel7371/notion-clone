@@ -141,7 +141,7 @@ const AccountSection = () => {
         <div
           className={cn(
             "overflow-auto",
-            `h-[calc(100vh-198px)] md:h-[calc(100vh-540px)] lg:h-[630px]`
+            `h-[calc(100vh-165px)] md:h-[calc(100vh-620px)] lg:h-[630px]`
           )}
         >
           <Table className="relative">

@@ -96,11 +96,11 @@ const AuditLogsSection = () => {
         </div>
       </div>
 
-      <div className="border rounded-lg">
+      <div className="border overflow-hidden rounded-lg">
         <div
           className={cn(
             "overflow-auto",
-            `h-[calc(100vh-208px)] md:h-[calc(100vh-600px)] lg:h-[570px]`
+            `h-[calc(100vh-208px)] md:h-[calc(100vh-680px)] lg:h-[570px]`
           )}
         >
           <Table className="relative">
